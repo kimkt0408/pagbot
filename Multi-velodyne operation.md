@@ -53,3 +53,6 @@
   <pre>
   rosrun tf static_transform_publisher 0 0 0 0 0 0 1 map velodyne1 10
   rosrun tf static_transform_publisher 0 0 0 0 0 0 1 map velodyne2 10</pre>
+  
+  
+**Implementation result**
