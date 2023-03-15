@@ -1,0 +1,55 @@
+### Multi-velodyne operation
+
+**1. Assign static IP addresses to LiDARs**: Each LiDAR should have a unique IP address. You can assign a static IP address to each LiDAR using its configuration interface or web GUI. Make sure that these IP addresses are on the same subnet as the Jackal's onboard computer. For example, you can assign the IP addresses 192.168.1.201, 192.168.1.202, and so on.
+
+  * Horizontal velodyne (H)
+    * IP Address: 192.168.1.201
+    * Data Port: 2368
+    * Telemetry Port: 8308
+
+  * Vertical velodyne (V)
+    * IP Address: 192.168.1.202
+    * Data Port: 2369
+    * Telemetry Port: 8309
+    
+  * Informations for changing LiDAR ip configurations:
+    * [https://github.com/JeongJae0815/Multi_Velodyne](https://github.com/JeongJae0815/Multi_Velodyne)
+    * [https://velodynelidar.com/wp-content/uploads/2019/09/63-9266-REV-A-WEBSERVER-USER-GUIDEHDL-32EVLP-16.pdf](https://velodynelidar.com/wp-content/uploads/2019/09/63-9266-REV-A-WEBSERVER-USER-GUIDEHDL-32EVLP-16.pdf)
+
+
+<br></br>
+**2. Network configuration**: Each LiDAR requires a unique IP address. Assign a static IP address to each LiDAR using the device's configuration interface or web GUI. Ensure that these IP addresses are on the same subnet as the Jackal's onboard computer.
+
+  * Name of an ethernet port which Jackal uses for LiDARs: br0
+
+  * IP configuration command
+  <pre>
+  ip addr flush dev br0
+  sudo ifconfig br0 192.168.1.77
+  sudo route add 192.168.1.201 br0
+  sudo route add 192.168.1.202 br0</pre>
+  
+  * To check ip connection
+  <pre>
+  ping 192.168.1.201
+  ping 192.168.1.202</pre>
+  
+  * If you want to check the ip configurations of Jackal computer:
+  <pre>
+  ifconfig</pre>
+  
+
+<br></br>
+**3. Roslaunch a launch file**: Two LiDARs are operated simultaneously with the following command.
+
+  <pre>
+  roslaunch velodyne_pointcloud VLP16_points_multi.launch</pre>
+  
+  * frame_id
+    * Horizontal LiDAR (H): velodyne1
+    * Vertical LiDAR (V): velodyne2
+
+  * If you have an error about no fixed frame, use:
+  <pre>
+  rosrun tf static_transform_publisher 0 0 0 0 0 0 1 map velodyne1 10
+  rosrun tf static_transform_publisher 0 0 0 0 0 0 1 map velodyne2 10</pre>
