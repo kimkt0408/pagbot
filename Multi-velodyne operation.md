@@ -13,8 +13,9 @@
     * Telemetry Port: 8309
     
   * Informations for changing LiDAR ip configurations:
-    * [https://github.com/JeongJae0815/Multi_Velodyne](https://github.com/JeongJae0815/Multi_Velodyne)
-    * [https://velodynelidar.com/wp-content/uploads/2019/09/63-9266-REV-A-WEBSERVER-USER-GUIDEHDL-32EVLP-16.pdf](https://velodynelidar.com/wp-content/uploads/2019/09/63-9266-REV-A-WEBSERVER-USER-GUIDEHDL-32EVLP-16.pdf)
+    * [Github about multi velodyne operation: https://github.com/JeongJae0815/Multi_Velodyne](https://github.com/JeongJae0815/Multi_Velodyne)
+    * [VLP16 User guide: https://velodynelidar.com/wp-content/uploads/2019/09/63-9266-REV-A-WEBSERVER-USER-GUIDEHDL-32EVLP-16.pdf](https://velodynelidar.com/wp-content/uploads/2019/09/63-9266-REV-A-WEBSERVER-USER-GUIDEHDL-32EVLP-16.pdf)
+    * [VLP16 tutorial: http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16](http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16)
 
 
 <br></br>
@@ -49,10 +50,9 @@
     * Horizontal LiDAR (H): velodyne1
     * Vertical LiDAR (V): velodyne2
 
-  * If you have an error about no fixed frame, use:
-  <pre>
-  rosrun tf static_transform_publisher 0 0 0 0 0 0 1 map velodyne1 10
-  rosrun tf static_transform_publisher 0 0 0 0 0 0 1 map velodyne2 10</pre>
+  * TF setting between base_link and LiDARs
+  <pre><code>&lt;node pkg="tf2_ros" type="static_transform_publisher" name="base_to_velodyne1" args="-0.14 0 0.55 3.14159265359 0 0 base_link velodyne1" /&gt;</code></pre>
+  <pre><code>&lt;node pkg="tf2_ros" type="static_transform_publisher" name="base_to_velodyne2" args="-0.26 0 0.41 1.570796327 0 -1.570796327 base_link velodyne2" /&gt;</code></pre>
   
  
 <br></br>
