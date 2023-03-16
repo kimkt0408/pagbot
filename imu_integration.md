@@ -1,5 +1,6 @@
 ### 1. Internal IMU integration 
-* [Calibration troubleshooting](https://github.com/husky/husky/issues/182)
+**(1) [IMU calibration](https://www.clearpathrobotics.com/assets/guides/melodic/jackal/calibration.html)**
+  * [Calibration troubleshooting](https://github.com/husky/husky/issues/182)
 
 ### 2. IMU(3DM-GX5-25) integration 
 
