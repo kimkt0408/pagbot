@@ -9,6 +9,7 @@
   <pre>
   sudo apt-get update && sudo apt-get install ros-ROS_DISTRO-microstrain-inertial-driver</pre>
   <pre>
+  cd catkin_ws/src
   git clone https://github.com/ros-drivers/microstrain_mips.git</pre>
 
 **2. Change usb port configuration**
