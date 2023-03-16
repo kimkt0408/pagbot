@@ -5,9 +5,22 @@
 * [GX5 ROS driver from Clearpath](https://github.com/ros-drivers/microstrain_mips)
 * [GX5 ROS driver from LORD-MicroStrain](https://github.com/LORD-MicroStrain/microstrain_inertial)
 
-<!-- **1. Assign static IP addresses to LiDARs**: Each LiDAR should have a unique IP address. You can assign a static IP address to each LiDAR using its configuration interface or web GUI. Make sure that these IP addresses are on the same subnet as the Jackal's onboard computer. For example, you can assign the IP addresses 192.168.1.201, 192.168.1.202, and so on.
+**1. ROS driver/package installation**
+  <pre>
+  sudo apt-get update && sudo apt-get install ros-ROS_DISTRO-microstrain-inertial-driver</pre>
+  <pre>
+  git clone https://github.com/ros-drivers/microstrain_mips.git</pre>
 
-  * Horizontal velodyne (H)
+**2. Change usb port configuration**
+  <pre>
+  roscd microstrain_mips/launch
+  gedit microstrain.launch</pre>
+  
+  <code>&lt;arg name="port" default="/dev/microstrain" /&gt;</code> 
+  
+  -> <code>&lt;arg name="port" default="/dev/ttyACM0" /&gt;</code> or  <code>&lt;arg name="port" default="/dev/ttyACM1" /&gt;</code>
+  
+  <!-- * Horizontal velodyne (H)
     * IP Address: 192.168.1.201
     * Data Port: 2368
     * Telemetry Port: 8308
