@@ -13,9 +13,9 @@
     * Telemetry Port: 8309
     
   * Informations for changing LiDAR ip configurations:
-    * [Github about multi velodyne operation: https://github.com/JeongJae0815/Multi_Velodyne](https://github.com/JeongJae0815/Multi_Velodyne)
-    * [VLP16 User guide: https://velodynelidar.com/wp-content/uploads/2019/09/63-9266-REV-A-WEBSERVER-USER-GUIDEHDL-32EVLP-16.pdf](https://velodynelidar.com/wp-content/uploads/2019/09/63-9266-REV-A-WEBSERVER-USER-GUIDEHDL-32EVLP-16.pdf)
-    * [VLP16 tutorial: http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16](http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16)
+    * [Github about multi velodyne operation](https://github.com/JeongJae0815/Multi_Velodyne)
+    * [VLP16 user guide](https://velodynelidar.com/wp-content/uploads/2019/09/63-9266-REV-A-WEBSERVER-USER-GUIDEHDL-32EVLP-16.pdf)
+    * [VLP16 ROS wiki tutorial](http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16)
 
 
 <br></br>
