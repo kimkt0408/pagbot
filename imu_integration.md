@@ -1,6 +1,7 @@
 ### 1. Internal IMU activation 
 **(1) [IMU calibration](https://www.clearpathrobotics.com/assets/guides/melodic/jackal/calibration.html)**:
-With this process, the imu data is calibrated and corrected data can be published.
+
+Follow the instuctions in the link above. With this process, the imu is calibrated and corrected data can be published.
   * [Calibration troubleshooting](https://github.com/husky/husky/issues/182)
 
 ### 2. IMU(3DM-GX5-25) integration 
