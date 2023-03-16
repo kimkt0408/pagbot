@@ -19,7 +19,10 @@
   <code>&lt;arg name="port" default="/dev/microstrain" /&gt;</code> 
   
   -> <code>&lt;arg name="port" default="/dev/ttyACM0" /&gt;</code> or  <code>&lt;arg name="port" default="/dev/ttyACM1" /&gt;</code>
-  
+
+**3. Launch**
+  <pre>
+  roslaunch microstrain_mips microstrain.launch</pre>
   <!-- * Horizontal velodyne (H)
     * IP Address: 192.168.1.201
     * Data Port: 2368
