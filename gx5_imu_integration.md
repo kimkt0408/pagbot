@@ -1,6 +1,8 @@
 ### IMU integration to Jackal system (IMU: 3DM-GX5-25)
 
 * IMU: 3DM-GX5-25 ([User manual](https://cdn.shopify.com/s/files/1/1750/5061/files/3dm-gx5-25_user_manual.pdf?16138305523735781123))
+* [GX5 description by Clearpath robotics](https://clearpathrobotics.com/blog/2019/05/clearpath-updates-lord-microstrain-imu-ros-driver-with-key-features/)
+* [GX5 ROS driver](https://github.com/ros-drivers/microstrain_mips)
 
 <!-- **1. Assign static IP addresses to LiDARs**: Each LiDAR should have a unique IP address. You can assign a static IP address to each LiDAR using its configuration interface or web GUI. Make sure that these IP addresses are on the same subnet as the Jackal's onboard computer. For example, you can assign the IP addresses 192.168.1.201, 192.168.1.202, and so on.
 
