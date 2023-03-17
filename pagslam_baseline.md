@@ -17,7 +17,7 @@ rosbag play –clock ROSBAG_NAME.bag</pre>
   
 **2. LeGO-LOAM**
 * Change the parameters in `/catkin_ws/src/LeGO-LOAM/LeGO-LOAM/include/utility.h`
-  * PointCloud2 topic: `/os1_cloud_node/points` (simulation) -> `/os_cloud_node/points` (ACRE)
+  * PointCloud2 topic: `/os1_cloud_node/points` (simulation) → `/os_cloud_node/points` (ACRE)
  
 <pre>
 roslaunch lego_loam run.launch</pre>
