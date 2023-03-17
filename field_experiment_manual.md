@@ -1,4 +1,4 @@
-### Field experiment (ACRE, greenhouse)
+### Field experiment manual (ACRE, greenhouse)
 
 **1. Materials to bring for experiments**
 * Jackal
