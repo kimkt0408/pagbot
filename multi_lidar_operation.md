@@ -1,4 +1,4 @@
-### Multi-velodyne operation
+### Multi-LiDAR operation (Velodyne VLP-16)
 
 **1. Assign static IP addresses to LiDARs**: Each LiDAR should have a unique IP address. You can assign a static IP address to each LiDAR using its configuration interface or web GUI. Make sure that these IP addresses are on the same subnet as the Jackal's onboard computer. For example, you can assign the IP addresses 192.168.1.201, 192.168.1.202, and so on.
 
