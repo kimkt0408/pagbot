@@ -31,3 +31,7 @@
 (3) Launch
   <pre>
   roslaunch microstrain_mips microstrain.launch</pre>
+  
+  
+#### RESULT
+* IMU data before/after calibration
