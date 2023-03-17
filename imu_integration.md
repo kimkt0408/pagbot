@@ -5,7 +5,6 @@
   * [IMU calibration](https://www.clearpathrobotics.com/assets/guides/melodic/jackal/calibration.html): Follow the instuctions in the link above. With this process, the imu is calibrated and corrected data can be published.
   * [Calibration troubleshooting](https://github.com/husky/husky/issues/182)
 
-<br></br>
 **2. IMU(3DM-GX5-25) integration**
 
 * [3DM-GX5-25 User manual](https://cdn.shopify.com/s/files/1/1750/5061/files/3dm-gx5-25_user_manual.pdf?16138305523735781123)
