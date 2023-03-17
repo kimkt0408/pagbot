@@ -35,4 +35,5 @@
   
 #### RESULT
 * IMU data before/after calibration
-![imu_calibration_result](https://user-images.githubusercontent.com/42059549/226056488-520da16b-9b19-4a0d-a7a2-7013844723a3.png)
+<br></br>
+![imu_calibration_result](https://user-images.githubusercontent.com/42059549/226056731-685c3503-aff9-4a57-96a7-cfad42e717da.png)
