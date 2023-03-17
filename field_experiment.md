@@ -1,4 +1,4 @@
-### Field experiment(ACRE, greenhouse)
+### Field experiment (ACRE, greenhouse)
 
 **1. Materials to bring for experiments**
 * Jackal
@@ -34,64 +34,91 @@
 
 **3. Code**
 
+(1) SSH connection
+<pre>
+sudo gedit ~/.bashrc</pre>
 
-  * IP Address: 192.168.1.201
-    * Data Port: 2368
-    * Telemetry Port: 8308
-
-  * Vertical velodyne (V)
-    * IP Address: 192.168.1.202
-    * Data Port: 2369
-    * Telemetry Port: 8309
-    
-  * Informations for changing LiDAR ip configurations:
-    * [Github about multi velodyne operation](https://github.com/JeongJae0815/Multi_Velodyne)
-    * [VLP16 user guide](https://velodynelidar.com/wp-content/uploads/2019/09/63-9266-REV-A-WEBSERVER-USER-GUIDEHDL-32EVLP-16.pdf)
-    * [VLP16 ROS wiki tutorial](http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16)
-
-
-<br></br>
-**2. Network configuration**: Each LiDAR requires a unique IP address. Assign a static IP address to each LiDAR using the device's configuration interface or web GUI. Ensure that these IP addresses are on the same subnet as the Jackal's onboard computer.
-
-  * Name of an ethernet port which Jackal uses for LiDARs: br0
-
-  * IP configuration command
+(2) Grid map creation
+  * Begin gmapping
   <pre>
-  ip addr flush dev br0
-  sudo ifconfig br0 192.168.1.77
-  sudo route add 192.168.1.201 br0
-  sudo route add 192.168.1.202 br0</pre>
+  roslaunch gmapping gmapping_jackal.launch</pre>
   
-  * To check ip connection
+  * Control Jackal by keyboard
   <pre>
-  ping 192.168.1.201
-  ping 192.168.1.202</pre>
-  
-  * If you want to check the ip configurations of Jackal computer:
+  rosrun teleop_twist_keyboard teleop_twist_keyboard.py</pre>
+
+  * Save the grid map
   <pre>
-  ifconfig</pre>
+  rosrun map_server map_saver –f MAP_NAME</pre>
   
-
-<br></br>
-**3. Roslaunch a launch file**: Two LiDARs are operated simultaneously with the following command.
-
+(3) Sensor data subscription
+  * Initialize 3D LiDAR(Ouster ver.)
   <pre>
-  roslaunch velodyne_pointcloud VLP16_points_multi.launch</pre>
+  sudo ./init_ouster.sh</pre>
   
-  * frame_id
-    * Horizontal LiDAR (H): velodyne1
-    * Vertical LiDAR (V): velodyne2
+  * Connect 2D LiDAR with USB port
+  <pre>
+  sudo chmod a+rw /dev/ttyUSB0</pre>
+  
+  * Subscribe all sensor data
+  <pre>
+  roslaunch sensor_integration jackal_os_lds_t265.launch</pre>
+  
+(4) AMCL localization
+  * Apply the grid map into AMCL localizer (change the map file (.yaml))
+  <pre>
+  roscd jackal_navigation/launch
+  sudo gedit amcl_test.launch</pre>
 
-  * TF setting between base_link and LiDARs
-  <pre><code>&lt;node pkg="tf2_ros" type="static_transform_publisher" name="base_to_velodyne1" args="-0.14 0 0.55 3.14159265359 0 0 base_link velodyne1" /&gt;</code></pre>
-  <pre><code>&lt;node pkg="tf2_ros" type="static_transform_publisher" name="base_to_velodyne2" args="-0.26 0 0.41 1.570796327 0 -1.570796327 base_link velodyne2" /&gt;</code></pre>
+  * Begin AMCL localizer
+  <pre>
+  roscd /opt/ros/melodic/share/jackal_navigation/launch
+  roslaunch amcl_test.launch</pre>
   
+  * Change the global coordinate from `odom` to `map`
+  
+  * Initialize the robot pose with `2D estimated pose` in RVIZ
  
-<br></br>
-**Implementation result**
+(5) Record all topics
+<pre>
+rosbag record -a</pre>
 
-  * Horizontal velodyne (H): Point cloud with colors
-  * Vertical velodyne (V): Point cloud with white
+(6) Row tracer: autonomous navigation module
+  * Change the goal location based on the map
+  <pre>
+  roscd navigation_goals/param
+  sudo gedit navigation_goals_param.yaml</pre>
+  
+  * Launch the module
+  <pre>
+  roslaunch navigation_goals navigation_goals.launch</pre>
+  
+(7) Crop sampling
 
-![two_lidar_test_real](https://user-images.githubusercontent.com/42059549/225409163-1d7fb0db-9854-46d1-a707-9a8629e13892.png)
+(8) Diameter measurement module (with the recorded rosbag file)
+  * Tune the parameters
+  <pre>
+  roscd diameter_measurement/src
+  code diameter_measurement3.py</pre>
+  
+  * Launch the file
+  <pre>
+  roslaunch diameter_measurement diameter_measurement.launch</pre>
+  
+  * Record all results in .txt file by uncommenting some lines in the src file
 
+(9) Height measurement module (with the recorded rosbag file)
+  * Launch the file
+  <pre>
+  roslaunch height_measurement height_measurement.launch</pre>
+  
+  * Record all results in .txt file by uncommenting some lines in the src file
+
+**4. Etc**
+* Publish the constant velocity
+<pre>
+rostopic pub -r 60 /cmd_vel geometry_msgs/Twist "linear:</pre>
+
+* How to copy rosbag file from jackal to the laptop by SSH
+<pre>
+scp -r administrator@192.168.131.1:/home/administrator/2021-09-22-14-15-20.bag /home/kimkt0408/</pre>
