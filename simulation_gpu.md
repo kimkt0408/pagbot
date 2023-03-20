@@ -1,7 +1,7 @@
 ### Simulation with GPU
 
 **0. GPU setting**
-* Activate gpu utilization in Gazebo
+* How to activate GPU for Gazebo
 
   <pre>
   optirun gazebo</pre>
