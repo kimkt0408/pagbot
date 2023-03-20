@@ -61,5 +61,5 @@
   * Horizontal velodyne (H): Point cloud with colors
   * Vertical velodyne (V): Point cloud with white
 
-![two_lidar_test_real](https://user-images.githubusercontent.com/42059549/225409163-1d7fb0db-9854-46d1-a707-9a8629e13892.png)
+<img src="https://user-images.githubusercontent.com/42059549/225409163-1d7fb0db-9854-46d1-a707-9a8629e13892.png" alt="two_lidar_test_real" width="600" />
 
