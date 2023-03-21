@@ -25,7 +25,7 @@ https://msadowski.github.io/Realsense-T265-First-Impressions/))
 **2. `robot_localization.yaml` update**: To fuse VIO into the existing odometry `/odometry/filtered` (Ref: [https://github.com/IntelRealSense/realsense-ros/issues/2400](https://github.com/IntelRealSense/realsense-ros/issues/2400))
   <pre>
   roscd jackal_control/config
-  sudo gedit rovbot_localization_t265.yaml</pre>
+  sudo gedit robot_localization_t265.yaml</pre>
 
   * Fix configurations for each sensor
   ```
