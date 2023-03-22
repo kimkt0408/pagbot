@@ -5,7 +5,7 @@
   <br></br>
   <pre>
   telnet 192.168.0.104 9001</pre>
-  * `192.168.0.104`: Emlid M2 IP address (Check the app)
+  * `192.168.0.104`: Emlid M2 IP address (Check the app: (example: MSRAL_highbay))
   * `9001`: port of position output(position streaming) (Check the app)
 
 <!--
