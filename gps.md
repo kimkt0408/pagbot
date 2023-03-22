@@ -1,6 +1,6 @@
 ### GPS (Emlid M2)
 
-* [ROS driver: Reach RTK ROS Node](https://github.com/rpng/reach_ros_node): Follow the instructions in the link
+* [ROS driver(Reach RTK ROS Node)](https://github.com/rpng/reach_ros_node): Follow the instructions in the link
 * How to check whether Emlid M2 is connected to computer
   <br></br>
   <pre>
