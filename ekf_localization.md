@@ -1,4 +1,4 @@
-### EKF localization with fused odometry
+### [EKF](https://automaticaddison.com/extended-kalman-filter-ekf-with-python-code-example/) localization with fused odometry
 
 **0. Odometry sources to be fused**
 * Wheel odometry: `/jackal_velocity_controller/odom` (type: `nav_msgs/Odometry`)
