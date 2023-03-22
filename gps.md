@@ -1,4 +1,13 @@
 ### GPS (Emlid M2)
+
+* [ROS driver: Reach RTK ROS Node](https://github.com/rpng/reach_ros_node): Follow the instructions in the link
+* How to check whether Emlid M2 is connected to computer
+  <br></br>
+  <pre>
+  telnet 192.168.0.104 9001</pre>
+  * `192.168.0.104`: Emlid M2 IP address (Check the app)
+  * `9001`: port of position output(position streaming) (Check the app)
+
 <!--
 **0. Odometry sources to be fused**
 * Wheel odometry: `/jackal_velocity_controller/odom` (type: `nav_msgs/Odometry`)
