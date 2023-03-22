@@ -1,4 +1,4 @@
-### GPS (Emlid M2)
+### GPS (Emlid Reach M2)
 
 * [ROS driver(Reach RTK ROS Node)](https://github.com/rpng/reach_ros_node): Follow the instructions
 
