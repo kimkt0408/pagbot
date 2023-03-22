@@ -3,8 +3,9 @@
 * [ROS driver(Reach RTK ROS Node)](https://github.com/rpng/reach_ros_node): Follow the instructions
 
 * How to check whether Emlid M2 is connected to computer
-  <pre>
-  telnet 192.168.0.104 9001</pre>
+  ```
+  telnet 192.168.0.104 9001
+  ```
   
   * `192.168.0.104`: Emlid M2 IP address (Check the app: (example: MSRAL_highbay))
   * `9001`: port of position output(position streaming) (Check the app)
@@ -20,9 +21,10 @@
     ```
     
 * Run the driver
-  <pre>
+  ```
   roscore
-  rosrun reach_ros_node nmea_tcp_driver _host:=192.168.0.104 _port:=9001</pre>
+  rosrun reach_ros_node nmea_tcp_driver _host:=192.168.0.104 _port:=9001
+  ```
   
   * Result
     ```
