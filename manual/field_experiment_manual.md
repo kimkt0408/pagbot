@@ -1,6 +1,6 @@
-### Field experiment manual (ACRE, greenhouse)
+## Field experiment manual (ACRE, greenhouse)
 
-**1. Materials to bring for experiments**
+###1. Materials to bring for experiments
 * Jackal
 * Fully-charged battery
 * Ethernet cable
@@ -8,7 +8,7 @@
 * Extension cord
 * Recording & Ground truth measurements: ruler, tape, camera tripod, smartphone
 
-**2. Scenario**
+### 2. Scenario
 * Construct the experimental environment with corns/sorghums
   * What spacing should the plants be at?
   * How many rows ideally?
@@ -32,8 +32,7 @@
   * Repeat the modules
 * Stop recording
 
-**3. Code**
-
+### 3. Code
 (1) SSH connection
 <pre>
 sudo gedit ~/.bashrc</pre>
@@ -114,7 +113,7 @@ rosbag record -a</pre>
   
   * Record all results in .txt file by uncommenting some lines in the src file
 
-**4. Etc**
+### 4. etc
 * Publish the constant velocity
 <pre>
 rostopic pub -r 60 /cmd_vel geometry_msgs/Twist "linear:</pre>
