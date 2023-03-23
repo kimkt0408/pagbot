@@ -56,7 +56,7 @@
   
  
 -------------------
-**Implementation result**
+#### RESULT
 
   * Horizontal velodyne (H): Point cloud with colors
   * Vertical velodyne (V): Point cloud with white
