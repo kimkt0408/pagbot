@@ -2,21 +2,21 @@
 
 ### 1. Simulation
   * Edit parameters of goal location and direction 
-  ```
-  roscd autonomous_navigation
-  cd param
-  sudo gedit navigation_param.yaml
-  ```
+   ```
+   roscd autonomous_navigation
+   cd param
+   sudo gedit navigation_param.yaml
+   ```
   
   * Create a Gazebo world
-  ```
-  roslaunch jackal_gazebo test_world.launch
-  ```
+   ```
+   roslaunch jackal_gazebo test_world.launch
+   ```
   
   * Launch the autonomous navigation module
-  ```
-  roslaunch autonomous navigation navigation.launch
-  ```
+   ```
+   roslaunch autonomous navigation navigation.launch
+   ```
 
 -------------------
 #### Reference paper
