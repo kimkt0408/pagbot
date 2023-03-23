@@ -55,7 +55,7 @@
   <pre><code>&lt;node pkg="tf2_ros" type="static_transform_publisher" name="base_to_velodyne2" args="-0.26 0 0.41 1.570796327 0 -1.570796327 base_link velodyne2" /&gt;</code></pre>
   
  
-<br></br>
+-------------------
 **Implementation result**
 
   * Horizontal velodyne (H): Point cloud with colors
