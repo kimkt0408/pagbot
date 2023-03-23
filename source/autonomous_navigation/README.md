@@ -1,14 +1,22 @@
-### Autonomous navigation in rows and under canopies
+## Autonomous navigation in rows and under canopies
 
-**0. Odometry sources to be fused**
-* Wheel odometry: `/jackal_velocity_controller/odom` (type: `nav_msgs/Odometry`)
-* Internal IMU data: `/imu/data` (type: `sensor_msgs/Imu`) 
-* Visual-Inertial-Odometry(VIO) by [Realsense T265](https://github.com/IntelRealSense/realsense-ros#using-t265): `/camera/odom/sample` (type: `nav_msgs/Odometry`)
-
-
-**1. TF setting between Jackal and T265** (Ref: [https://msadowski.github.io/Realsense-T265-First-Impressions/](
-https://msadowski.github.io/Realsense-T265-First-Impressions/))
-
+### 1. Simulation
+  * Edit parameters of goal location and direction 
+  ```
+  roscd autonomous_navigation
+  cd param
+  sudo gedit navigation_param.yaml
+  ```
+  
+  * Create a Gazebo world
+  ```
+  roslaunch jackal_gazebo test_world.launch
+  ```
+  
+  * Launch the autonomous navigation module
+  ```
+  roslaunch autonomous navigation navigation.launch
+  ```
 
 -------------------
 #### Reference paper
