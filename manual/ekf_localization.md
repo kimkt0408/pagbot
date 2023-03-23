@@ -85,7 +85,7 @@ https://msadowski.github.io/Realsense-T265-First-Impressions/))
   <pre>
   roslaunch realsense2_camera rs_t265_localizer.launch</pre>
   
-<br></br>
+-------------------
 #### RESULT
 **1. Rqt_graph**
 <br></br>
