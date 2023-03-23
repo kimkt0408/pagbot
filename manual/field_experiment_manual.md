@@ -1,6 +1,6 @@
 ## Field experiment manual (ACRE, greenhouse)
 
-###1. Materials to bring for experiments
+### 1. Materials to bring for experiments
 * Jackal
 * Fully-charged battery
 * Ethernet cable
