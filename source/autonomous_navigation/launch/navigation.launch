@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d /home/iot4ag/catkin_ws/src/rviz/autonomous_navigation.rviz" />
+
+    <group ns="move_base_seq">
+        <rosparam file="$(find autonomous_navigation)/param/navigation_param.yaml" />
+    </group>
+
+    <node pkg="autonomous_navigation" type="navigation.py" name="navigation" output="screen" />
+    
+</launch>
