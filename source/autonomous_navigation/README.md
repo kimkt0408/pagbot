@@ -1,5 +1,7 @@
 ## Autonomous navigation in rows and under canopies
 
+This module is for the autonomous navigation by using 3D point cloud from a 3D LiDAR which is horizontally mounted on P-AgBot.
+
 ### 1. Simulation
   * Edit parameters of goal location and direction 
    ```
