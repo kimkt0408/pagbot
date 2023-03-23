@@ -24,7 +24,7 @@ from std_msgs.msg import Header
 
 from sklearn.cluster import DBSCAN
 from visualization_msgs.msg import Marker
-
+ 
 # Parameters
 
 # # ACRE-Sorghum
