@@ -1,6 +1,6 @@
-### P-AgSLAM baseline
+## P-AgSLAM baseline
 
-**1. LOAM**
+### 1. LOAM
 <pre>
 roslaunch loam_ouster loam_ouster.launch</pre>
 
@@ -15,7 +15,7 @@ rosbag play –clock ROSBAG_NAME.bag</pre>
   * Keyframe poses: `/integrated_to_init`
   * Map: `/laser_cloud_surround`
   
-**2. LeGO-LOAM**
+### 2. LeGO-LOAM
 * Change the parameters in `/catkin_ws/src/LeGO-LOAM/LeGO-LOAM/include/utility.h`
   * PointCloud2 topic: `/os1_cloud_node/points` (simulation) → `/os_cloud_node/points` (ACRE)
  
