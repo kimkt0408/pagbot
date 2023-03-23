@@ -1,6 +1,8 @@
-### Multi-LiDAR operation (Velodyne VLP-16)
+## Multi-LiDAR operation (Velodyne VLP-16)
 
-**1. Assign static IP addresses to LiDARs**: Each LiDAR should have a unique IP address. You can assign a static IP address to each LiDAR using its configuration interface or web GUI. Make sure that these IP addresses are on the same subnet as the Jackal's onboard computer. For example, you can assign the IP addresses 192.168.1.201, 192.168.1.202, and so on.
+### 1. Assign static IP addresses to LiDARs
+
+Each LiDAR should have a unique IP address. You can assign a static IP address to each LiDAR using its configuration interface or web GUI. Make sure that these IP addresses are on the same subnet as the Jackal's onboard computer. For example, you can assign the IP addresses 192.168.1.201, 192.168.1.202, and so on.
 
   * Horizontal velodyne (H)
     * IP Address: 192.168.1.201
@@ -17,9 +19,9 @@
     * [VLP16 user guide](https://velodynelidar.com/wp-content/uploads/2019/09/63-9266-REV-A-WEBSERVER-USER-GUIDEHDL-32EVLP-16.pdf)
     * [VLP16 ROS wiki tutorial](http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16)
 
+### 2. Network configuration 
 
-<br></br>
-**2. Network configuration**: Each LiDAR requires a unique IP address. Assign a static IP address to each LiDAR using the device's configuration interface or web GUI. Ensure that these IP addresses are on the same subnet as the Jackal's onboard computer.
+Each LiDAR requires a unique IP address. Assign a static IP address to each LiDAR using the device's configuration interface or web GUI. Ensure that these IP addresses are on the same subnet as the Jackal's onboard computer.
 
   * Name of an ethernet port which Jackal uses for LiDARs: br0
 
@@ -39,9 +41,8 @@
   <pre>
   ifconfig</pre>
   
-
-<br></br>
-**3. Roslaunch a launch file**: Two LiDARs are operated simultaneously with the following command.
+### 3. Roslaunch a launch file
+Two LiDARs are operated simultaneously with the following command.
 
   <pre>
   roslaunch velodyne_pointcloud VLP16_points_multi.launch</pre>
@@ -56,7 +57,7 @@
   
  
 -------------------
-#### RESULT
+### RESULT
 
   * Horizontal velodyne (H): Point cloud with colors
   * Vertical velodyne (V): Point cloud with white
