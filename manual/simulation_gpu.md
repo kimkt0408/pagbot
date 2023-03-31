@@ -6,12 +6,12 @@
   
   * Single GPU
 
-  ```
-  optirun gazebo
-  ```
+    ```
+    optirun gazebo
+    ```
 
   * Multiple GPUs
- 
-  ```
-  CUDA_VISIBLE_DEVICES=0,1,2 optirun gazebo
-  ```
+
+    ```
+    CUDA_VISIBLE_DEVICES=0,1,2 optirun gazebo
+    ```
