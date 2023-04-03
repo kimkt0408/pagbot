@@ -108,9 +108,19 @@ rosbag record -a</pre>
 
 (9) Height measurement module (with the recorded rosbag file)
   * Launch the file
-  <pre>
-  roslaunch height_measurement height_measurement.launch</pre>
-  
+
+    * Real 
+    
+    ```
+    roslaunch height_measurement height_measurement.launch
+    ```
+
+    * Simulation
+    
+    ```
+    roslaunch p_agbot crop_height.launch
+    ```
+    
   * Record all results in .txt file by uncommenting some lines in the src file
 
 ### 4. etc
