@@ -48,4 +48,4 @@ rosbag play –-clock ROSBAG_NAME.bag
 
 -------------------
 #### RESULT
-**1. [Driving with a loop]((https://purdue0-my.sharepoint.com/:f:/g/personal/kim3686_purdue_edu/Esc6GqVKoZVOjBHZxto71koBiU_5d-YGUYI8c4-d3dW1Fw?e=BOFlGm))**
+**1. [Driving with a loop](https://purdue0-my.sharepoint.com/:f:/g/personal/kim3686_purdue_edu/Esc6GqVKoZVOjBHZxto71koBiU_5d-YGUYI8c4-d3dW1Fw?e=BOFlGm)**
