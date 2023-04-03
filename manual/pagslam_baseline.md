@@ -49,3 +49,8 @@ rosbag play –-clock ROSBAG_NAME.bag
 -------------------
 #### RESULT
 **1. [Driving with a loop](https://purdue0-my.sharepoint.com/:v:/g/personal/kim3686_purdue_edu/EU-KiY4CWeBJp-uaaAm6w1EB0xYqrBLdgcVhEzGRYYy8dg?e=6gBQ95)**
+
+* Scenario
+
+https://user-images.githubusercontent.com/42059549/229541953-5fffe994-7ef4-40a8-9361-8330a0abb765.mp4
+
