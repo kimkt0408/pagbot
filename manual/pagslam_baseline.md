@@ -1,13 +1,15 @@
 ## P-AgSLAM baseline
 
 ### 1. LOAM
-<pre>
-roslaunch loam_ouster loam_ouster.launch</pre>
+```
+roslaunch loam_ouster loam_ouster.launch
+```
 
 * LiDAR topic: `velodyne1_points`
 
-<pre>
-rosbag play –-clock ROSBAG_NAME.bag</pre>
+```
+rosbag play –-clock ROSBAG_NAME.bag
+```
 
 * Rostopics
 
@@ -19,11 +21,13 @@ rosbag play –-clock ROSBAG_NAME.bag</pre>
 * Change the parameters in `/catkin_ws/src/LeGO-LOAM/LeGO-LOAM/include/utility.h`
   * PointCloud2 topic: `/velodyne1_points`
  
-<pre>
-roslaunch lego_loam run.launch</pre>
+```
+roslaunch lego_loam run.launch
+```
 
-<pre>
-rosbag play –-clock ROSBAG_NAME.bag</pre>
+```
+rosbag play –-clock ROSBAG_NAME.bag
+```
 
 * Rostopics
 
@@ -34,9 +38,11 @@ rosbag play –-clock ROSBAG_NAME.bag</pre>
 ### 3. LIO-SAM
 * Change the parameters in `/catkin_ws/src/lio_sam/LeGO-LOAM/include/utility.h`
  
-<pre>
-roslaunch lio_sam run.launch</pre>
+```
+roslaunch lio_sam run.launch
+```
 
-<pre>
-rosbag play –-clock ROSBAG_NAME.bag</pre>
+```
+rosbag play –-clock ROSBAG_NAME.bag
+```
 
