@@ -31,7 +31,7 @@ rosbag play –-clock ROSBAG_NAME.bag
 
 * Rostopics
 
-  * Keyframe poses: `/integrated_to_init`
+  * Keyframe poses: `/integrated_to_init/legoloam`
   * Map: `/registered_cloud`
 
 
