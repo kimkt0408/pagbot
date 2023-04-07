@@ -13,7 +13,7 @@ rosbag play –-clock ROSBAG_NAME.bag
 
 * Rostopics
 
-  * Keyframe poses: `/integrated_to_init`
+  * Keyframe poses: `/integrated_to_init/loam` (in `/home/kimkt0408/catkin_ws/src/loam_ouster/src/lib/TransformMaintenance.cpp`)
   * Map: `/laser_cloud_surround`
 
 
@@ -31,7 +31,7 @@ rosbag play –-clock ROSBAG_NAME.bag
 
 * Rostopics
 
-  * Keyframe poses: `/integrated_to_init/legoloam`
+  * Keyframe poses: `/integrated_to_init/legoloam` (in `/home/kimkt0408/catkin_ws/src/LeGO-LOAM/LeGO-LOAM/src/transformFusion.cpp`)
   * Map: `/registered_cloud`
 
 
