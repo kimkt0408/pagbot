@@ -58,6 +58,12 @@ rosbag play –-clock ROSBAG_NAME.bag
   * Keyframe poses: `/lio_sam/mapping/odometry`
   * Map: `/lio_sam/mapping/cloud_registered`
   
+  
+### Rosbag record
+```
+rosbag record /debug/gt_trajectory /pagslam/debug/original_trajectory /pagslam/debug/trajectory /pagslam/debug/map_total_cloud /pagslam/debug/map_cloud_marker /odometry/icp /map_points /integrated_to_init/loam /laser_cloud_surround /integrated_to_init/legoloam /registered_cloud /lio_sam/mapping/odometry /lio_sam/mapping/cloud_registered
+```
+
 -------------------
 #### RESULT
 **1. [Driving with a loop (LIO-SAM)](https://purdue0-my.sharepoint.com/:v:/g/personal/kim3686_purdue_edu/EU-KiY4CWeBJp-uaaAm6w1EB0xYqrBLdgcVhEzGRYYy8dg?e=6gBQ95)**
