@@ -4,7 +4,6 @@
 ```
 roslaunch icp_slam icp_slam.launch
 ```
-
 * Rostopics
 
   * Keyframe poses: `/odometry/icp`
@@ -21,7 +20,6 @@ roslaunch loam_ouster loam_ouster.launch
 ```
 rosbag play –-clock ROSBAG_NAME.bag
 ```
-
 * Rostopics
 
   * Keyframe poses: `/integrated_to_init/loam` (in `/home/kimkt0408/catkin_ws/src/loam_ouster/src/lib/TransformMaintenance.cpp`)
@@ -39,7 +37,6 @@ roslaunch lego_loam run.launch
 ```
 rosbag play –-clock ROSBAG_NAME.bag
 ```
-
 * Rostopics
 
   * Keyframe poses: `/integrated_to_init/legoloam` (in `/home/kimkt0408/catkin_ws/src/LeGO-LOAM/LeGO-LOAM/src/transformFusion.cpp`)
@@ -56,7 +53,6 @@ roslaunch lio_sam run.launch
 ```
 rosbag play –-clock ROSBAG_NAME.bag
 ```
-
 * Rostopics
 
   * Keyframe poses: `/lio_sam/mapping/odometry`
