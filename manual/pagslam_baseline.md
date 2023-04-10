@@ -4,6 +4,13 @@
 ```
 roslaunch icp_slam icp_slam.launch
 ```
+
+* Rostopics
+
+  * Keyframe poses: `/odometry/icp`
+  * Map: `/map_points`
+
+
 ### 2. [LOAM](https://github.com/laboshinl/loam_velodyne)
 ```
 roslaunch loam_ouster loam_ouster.launch
