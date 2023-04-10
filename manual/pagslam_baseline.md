@@ -1,6 +1,11 @@
 ## P-AgSLAM baseline
 
-### 1. [LOAM](https://github.com/laboshinl/loam_velodyne)
+### 1. [Full-ICP]
+```
+roslaunch icp_slam icp_slam.launch
+```
+
+### 2. [LOAM](https://github.com/laboshinl/loam_velodyne)
 ```
 roslaunch loam_ouster loam_ouster.launch
 ```
@@ -17,7 +22,7 @@ rosbag play –-clock ROSBAG_NAME.bag
   * Map: `/laser_cloud_surround`
 
 
-### 2. [LeGO-LOAM](https://github.com/RobustFieldAutonomyLab/LeGO-LOAM)
+### 3. [LeGO-LOAM](https://github.com/RobustFieldAutonomyLab/LeGO-LOAM)
 * Change the parameters in `/catkin_ws/src/LeGO-LOAM/LeGO-LOAM/include/utility.h`
   * PointCloud2 topic: `/velodyne1_points`
  
@@ -35,7 +40,7 @@ rosbag play –-clock ROSBAG_NAME.bag
   * Map: `/registered_cloud`
 
 
-### 3. [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM)
+### 4. [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM)
 * Change the parameters in `/catkin_ws/src/LIO-SAM/config/params.yaml`
  
 ```
@@ -53,7 +58,7 @@ rosbag play –-clock ROSBAG_NAME.bag
   
 -------------------
 #### RESULT
-**1. [Driving with a loop](https://purdue0-my.sharepoint.com/:v:/g/personal/kim3686_purdue_edu/EU-KiY4CWeBJp-uaaAm6w1EB0xYqrBLdgcVhEzGRYYy8dg?e=6gBQ95)**
+**1. [Driving with a loop (LIO-SAM)](https://purdue0-my.sharepoint.com/:v:/g/personal/kim3686_purdue_edu/EU-KiY4CWeBJp-uaaAm6w1EB0xYqrBLdgcVhEzGRYYy8dg?e=6gBQ95)**
 
 * Scenario
 
