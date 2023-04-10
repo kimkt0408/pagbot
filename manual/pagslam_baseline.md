@@ -46,6 +46,11 @@ roslaunch lio_sam run.launch
 rosbag play –-clock ROSBAG_NAME.bag
 ```
 
+* Rostopics
+
+  * Keyframe poses: `/lio_sam/mapping/odometry`
+  * Map: `/lio_sam/mapping/cloud_registered`
+  
 -------------------
 #### RESULT
 **1. [Driving with a loop](https://purdue0-my.sharepoint.com/:v:/g/personal/kim3686_purdue_edu/EU-KiY4CWeBJp-uaaAm6w1EB0xYqrBLdgcVhEzGRYYy8dg?e=6gBQ95)**
