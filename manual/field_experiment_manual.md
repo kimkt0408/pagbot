@@ -37,6 +37,12 @@
 <pre>
 sudo gedit ~/.bashrc</pre>
 
+* Update (https://www.clearpathrobotics.com/assets/guides/noetic/jackal/network.html)
+```
+sudo netplan apply jackal_router.yaml  # Jackal Router
+sudo netplan apply msral.yaml          # MSRAL Highbay
+```
+
 (2) Grid map creation
   * Begin gmapping
   <pre>
