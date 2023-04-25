@@ -45,7 +45,7 @@ sudo netplan apply msral.yaml          # MSRAL Highbay
 
 (2) Grid map creation
   
-  * Conversion: PointCloud2 -> LaserScan (https://www.clearpathrobotics.com/assets/guides/noetic/jackal/network.html)
+  * Conversion: PointCloud2 -> LaserScan ([https://github.com/kimkt0408/pagbot/tree/main/source/pc2_2_ls](https://github.com/kimkt0408/pagbot/tree/main/source/pc2_2_ls))
   ```
   roslaunch pc2_2_ls conversion.launch
   ```
