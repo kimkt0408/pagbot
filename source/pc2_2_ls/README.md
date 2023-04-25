@@ -1,6 +1,6 @@
-## Sensor data conversion for Gmapping: PointCloud2 -> LaserScan
+## 3D LiDAR data conversion for Gmapping
 
-This module converts 3D LiDAR sensor data `PointCloud2` to 2D LiDAR data type 'LaserScan' to use in Gmapping module which is for autonomous navigation.
+This module converts 3D LiDAR sensor data `PointCloud2` to 2D LiDAR data type `LaserScan` to use in Gmapping module which is for autonomous navigation.
 
 ### 1. How to run  
   * Edit parameters: `TARGET_HEIGHT_MIN`, `TARGET_HEIGHT_MAX` in `/src/conversion.py`
