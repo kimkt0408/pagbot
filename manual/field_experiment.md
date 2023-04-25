@@ -36,12 +36,14 @@
 (1) SSH connection
 <pre>
 sudo gedit ~/.bashrc</pre>
-
-* Update (https://www.clearpathrobotics.com/assets/guides/noetic/jackal/network.html)
-```
-sudo netplan apply jackal_router.yaml  # Jackal Router
-sudo netplan apply msral.yaml          # MSRAL Highbay
-```
+  
+  * Update (https://www.clearpathrobotics.com/assets/guides/noetic/jackal/network.html)
+    ```
+    sudo netplan apply jackal_router.yaml  # Jackal Router
+    sudo netplan apply msral.yaml          # MSRAL Highbay
+    ```
+      * MSRAL-highbay5G: `192.168.0.180`
+      * Jackal_Router: `192.168.0.179`  
 
 (2) Grid map creation
   
