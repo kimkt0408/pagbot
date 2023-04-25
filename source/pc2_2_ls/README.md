@@ -12,4 +12,7 @@ This module converts 3D LiDAR sensor datatype `PointCloud2` to 2D LiDAR datatype
     ```
 
 -------------------
-#### [RESULT](https://purdue0-my.sharepoint.com/:v:/g/personal/kim3686_purdue_edu/EW4aNzL6hJJCmrjP6RbLttQB6etdVL1M4PaMnTn8YVl3RQ?e=lnwIPF)
+#### RESULT
+
+https://user-images.githubusercontent.com/42059549/234399722-05137cc0-f333-4e8f-9a52-a065c3fe3ded.mp4
+
