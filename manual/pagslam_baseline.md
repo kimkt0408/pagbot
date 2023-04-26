@@ -1,5 +1,10 @@
 ## P-AgSLAM baseline
 
+### 0. P-AgSLAM
+```
+roslaunch pagslam pagslam.launch
+```
+
 ### 1. Full-ICP
 ```
 roslaunch icp_slam icp_slam.launch
