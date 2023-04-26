@@ -1,5 +1,7 @@
 ## P-AgSLAM baseline
 
+* **Info**: Change 3D LiDAR topics if you use past rosbags
+
 ### 0. P-AgSLAM
 ```
 roslaunch pagslam pagslam.launch
