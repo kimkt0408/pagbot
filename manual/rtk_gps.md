@@ -52,21 +52,22 @@
 
 ### 2. How to visualize RTK GPS data
   
-  (1) [Emlid studio](https://docs.emlid.com/emlid-studio/kinematic-processing-workflow/?_gl=1*1a2vkm3*_ga*MTY5MzgyODgwMy4xNjgxNDE1MTY4*_ga_958NJK16DK*MTY4MjA4MDU5NC42LjEuMTY4MjA4MjExMS4wLjAuMA..) 
+  * [Emlid studio](https://docs.emlid.com/emlid-studio/kinematic-processing-workflow/?_gl=1*1a2vkm3*_ga*MTY5MzgyODgwMy4xNjgxNDE1MTY4*_ga_958NJK16DK*MTY4MjA4MDU5NC42LjEuMTY4MjA4MjExMS4wLjAuMA..) 
   
-  * Result
+    * Result
   
-    <img src="https://user-images.githubusercontent.com/42059549/233645675-559a67e9-482b-44dc-8f5d-57aa26619905.JPG" alt="gps_result_example" width="600" />
+      <img src="https://user-images.githubusercontent.com/42059549/233645675-559a67e9-482b-44dc-8f5d-57aa26619905.JPG" alt="gps_result_example" width="600" />
   
-  (2) Google maps
+  * Google maps
   
-  (3) [Mapviz (ROS)](https://medium.com/@hitlx916/visualize-the-gnss-messages-in-mapviz-ros-4ae7eec19936)
-  ```
-  roslaunch mapviz mapviz.launch
-  ```
-  * Result
-  
-    <img src="https://user-images.githubusercontent.com/42059549/234695130-fdeb13d6-7207-4255-943a-2382f439369c.png" alt="gps_ros_mapviz" width="600" /> 
+  * [Mapviz (ROS)](https://medium.com/@hitlx916/visualize-the-gnss-messages-in-mapviz-ros-4ae7eec19936)
+    ```
+    roslaunch mapviz mapviz.launch
+    ```
+
+    * Result
+    
+      <img src="https://user-images.githubusercontent.com/42059549/234695130-fdeb13d6-7207-4255-943a-2382f439369c.png" alt="gps_ros_mapviz" width="600" /> 
 
   
     
