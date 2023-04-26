@@ -1,6 +1,9 @@
 ## GPS setting (Emlid Reach M2)
 
 * [ROS driver(nmea_navsat_driver)](http://wiki.ros.org/nmea_navsat_driver)
+  ```
+  sudo apt-get install ros-noetic-nmea-navsat-driver
+  ```
 
 * How to check whether Emlid M2 is connected to computer
   ```
@@ -10,7 +13,11 @@
   * `192.168.1.93`: Emlid M2 IP address (Check the app: (example: MSRAL_GPS))
   * `9001`: port of position output(position streaming) (Check the app)
   
-    
+* Find the serial port corresponding to the Emlid GPS device.
+  ```
+  dmesg | grep tty
+  ```
+   
 * Run the driver: Connect GPS module in PC physically
   ```
   roscore
