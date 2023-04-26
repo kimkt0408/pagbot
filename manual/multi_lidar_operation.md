@@ -47,9 +47,9 @@ Two LiDARs are operated simultaneously with the following command.
   <pre>
   roslaunch velodyne_pointcloud VLP16_points_multi.launch</pre>
   
-  * frame_id
-    * Horizontal LiDAR (H): velodyne1
-    * Vertical LiDAR (V): velodyne2
+  * frame_id / rostopic
+    * Horizontal LiDAR (H): velodyne1 / `/ns1/velodyne_points`
+    * Vertical LiDAR (V): velodyne2 / `/ns1/velodyne_points`
 
   * TF setting between base_link and LiDARs
   <pre><code>&lt;node pkg="tf2_ros" type="static_transform_publisher" name="base_to_velodyne1" args="-0.14 0 0.55 3.14159265359 0 0 base_link velodyne1" /&gt;</code></pre>
