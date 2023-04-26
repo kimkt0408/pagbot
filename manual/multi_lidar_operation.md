@@ -26,16 +26,18 @@ Each LiDAR requires a unique IP address. Assign a static IP address to each LiDA
   * Name of an ethernet port which Jackal uses for LiDARs: br0
 
   * IP configuration command
-  <pre>
-  ip addr flush dev br0
+  ```
+  sudo ip addr flush dev br0
   sudo ifconfig br0 192.168.1.77
   sudo route add 192.168.1.201 br0
-  sudo route add 192.168.1.202 br0</pre>
+  sudo route add 192.168.1.202 br0
+  ```
   
   * To check ip connection
-  <pre>
+  ```
   ping 192.168.1.201
-  ping 192.168.1.202</pre>
+  ping 192.168.1.202
+  ```
   
   * If you want to check the ip configurations of Jackal computer:
   <pre>
