@@ -29,7 +29,7 @@
   
   (Check: Position streaming 2 (Serial, USB to PC, baud_rate: 38400, NMEA))
   
-  * Output: `/fix` (rostopic: `sensor_msgs/NavSatFix`)
+  * Output: `/fix` (rostopic: `sensor_msgs/NavSatFix`) (In Jackal, `/navsat/fix`)
   
     https://user-images.githubusercontent.com/42059549/234640369-64e1e5d1-3a3d-4f89-a87c-29d94a262e0f.mp4
 
