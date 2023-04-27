@@ -20,7 +20,7 @@
   dmesg | grep tty
   ```
    
-* Run the driver: Connect GPS module in PC physically
+* Run the driver: Connect GPS module in PC physically (in Jackal, use /dev/ttyACM1 instead of /dev/ttyACM0)
   ```
   roscore
   sudo chmod 666 /dev/ttyACM0
