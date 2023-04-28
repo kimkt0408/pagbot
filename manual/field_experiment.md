@@ -1,6 +1,7 @@
 ## Field experiment manual
 
 ### 1. Materials to bring for experiments
+
 * Jackal
 * Fully-charged battery
 * Ethernet cable
@@ -9,6 +10,7 @@
 * Recording & Ground truth measurements: ruler, tape, camera tripod, smartphone
 
 ### 2. Scenario
+
 * Construct the experimental environment with corns/sorghums
   * What spacing should the plants be at?
   * How many rows ideally?
@@ -34,8 +36,9 @@
 
 ### 3. Code
 (1) SSH connection
-<pre>
-sudo gedit ~/.bashrc</pre>
+  ```
+  sudo gedit ~/.bashrc
+  ```
   
   * Update (https://www.clearpathrobotics.com/assets/guides/noetic/jackal/network.html)
     ```
@@ -65,62 +68,70 @@ sudo gedit ~/.bashrc</pre>
   rosrun map_server map_saver –f MAP_NAME</pre>
   
 (3) Sensor data subscription
-  * Initialize 3D LiDAR(Ouster ver.)
-  <pre>
-  sudo ./init_ouster.sh</pre>
+  * [Activate the ekf localizer with fused sensor data](https://github.com/kimkt0408/pagbot/blob/main/manual/ekf_localization.md)
+    ```
+    roslaunch realsense2_camera rs_t265_localizer.launch
+    ```
   
-  * Connect 2D LiDAR with USB port
-  <pre>
-  sudo chmod a+rw /dev/ttyUSB0</pre>
-  
-  * Subscribe all sensor data
-  <pre>
-  roslaunch sensor_integration jackal_os_lds_t265.launch</pre>
+  * [Activate multi 3D LiDARs](https://github.com/kimkt0408/pagbot/blob/main/manual/multi_lidar_operation.md)
+    ```
+    roslaunch velodyne_pointcloud VLP16_points_multi.launch
+    ```
   
 (4) AMCL localization
   * Apply the grid map into AMCL localizer (change the map file (.yaml))
-  <pre>
-  roscd jackal_navigation/launch
-  sudo gedit amcl_test.launch</pre>
+    ```
+    roscd jackal_navigation/launch
+    sudo gedit amcl_test.launch
+    ```
 
   * Begin AMCL localizer
-  <pre>
-  roscd /opt/ros/melodic/share/jackal_navigation/launch
-  roslaunch amcl_test.launch</pre>
+    ```
+    roscd /opt/ros/noetic/share/jackal_navigation/launch
+    roslaunch amcl_test.launch
+    ```
   
   * Change the global coordinate from `odom` to `map`
   
   * Initialize the robot pose with `2D estimated pose` in RVIZ
  
 (5) Record all topics
-<pre>
-rosbag record -a</pre>
+  ```
+  rosbag record -a
+  ```
 
 (6) Row tracer: autonomous navigation module
+
   * Change the goal location based on the map
-  <pre>
-  roscd navigation_goals/param
-  sudo gedit navigation_goals_param.yaml</pre>
+    ```
+    roscd navigation_goals/param
+    sudo gedit navigation_goals_param.yaml
+    ```
   
   * Launch the module
-  <pre>
-  roslaunch navigation_goals navigation_goals.launch</pre>
+    ```
+    roslaunch navigation_goals navigation_goals.launch
+    ```
   
 (7) Crop sampling
 
 (8) Diameter measurement module (with the recorded rosbag file)
+  
   * Tune the parameters
-  <pre>
+  ```
   roscd diameter_measurement/src
-  code diameter_measurement3.py</pre>
+  code diameter_measurement3.py
+  ```
   
   * Launch the file
-  <pre>
-  roslaunch diameter_measurement diameter_measurement.launch</pre>
+  ```
+  roslaunch diameter_measurement diameter_measurement.launch
+  ```
   
   * Record all results in .txt file by uncommenting some lines in the src file
 
 (9) Height measurement module (with the recorded rosbag file)
+  
   * Launch the file
 
     * Real 
@@ -138,10 +149,13 @@ rosbag record -a</pre>
   * Record all results in .txt file by uncommenting some lines in the src file
 
 ### 4. etc
+
 * Publish the constant velocity
-<pre>
-rostopic pub -r 60 /cmd_vel geometry_msgs/Twist "linear:</pre>
+  ```
+  rostopic pub -r 60 /cmd_vel geometry_msgs/Twist "linear:
+  ```
 
 * How to copy rosbag file from jackal to the laptop by SSH
-<pre>
-scp -r administrator@192.168.131.1:/home/administrator/2021-09-22-14-15-20.bag /home/kimkt0408/</pre>
+  ```
+  scp -r administrator@192.168.131.1:/home/administrator/2021-09-22-14-15-20.bag /home/kimkt0408/
+  ```
