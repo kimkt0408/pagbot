@@ -45,11 +45,18 @@ To fuse VIO into the existing odometry `/odometry/filtered` (Ref: [https://githu
 
   imu0: /imu/data
   imu0_config: [false, false, false,
-                true, true, true,
+                false, false, true,
                 false, false, false,
-                true, true, true,
-                false, false, false]
+                false, false, true,
+                true, false, false]
   imu0_differential: false
+  # imu0: /imu/data
+  # imu0_config: [false, false, false,
+  #               true, true, true,
+  #               false, false, false,
+  #               true, true, true,
+  #               false, false, false]
+  # imu0_differential: false
 
   # Add T265 odometry (VIO)
   odom1: /camera/odom/sample
