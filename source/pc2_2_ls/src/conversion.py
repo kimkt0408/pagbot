@@ -9,8 +9,8 @@ SCAN_ANGLE = np.pi * 2.0  # Full scan angle in radians
 SCAN_RES = SCAN_ANGLE / NUM_RANGES  # Angular resolution of each range in radians
 SCAN_RANGE = 100.0  # Maximum range of the laser scanner
 
-TARGET_HEIGHT_MIN = -1e-2
-TARGET_HEIGHT_MAX = 1e-2
+TARGET_HEIGHT_MIN = -1e-1
+TARGET_HEIGHT_MAX = 1e-1
 
 def callback(data):
     # Convert the point cloud message to a generator of (x, y, z, intensity) tuples
