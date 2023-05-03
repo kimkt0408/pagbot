@@ -17,7 +17,7 @@ This module is for the autonomous navigation by using 3D point cloud from a 3D L
   
   * Launch the autonomous navigation module
    ```
-   roslaunch autonomous navigation navigation.launch
+   roslaunch autonomous_navigation navigation.launch
    ```
 
 -------------------
