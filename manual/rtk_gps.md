@@ -58,7 +58,7 @@
   
       <img src="https://user-images.githubusercontent.com/42059549/233645675-559a67e9-482b-44dc-8f5d-57aa26619905.JPG" alt="gps_result_example" width="600" />
   
-  * Google maps
+  * Google maps (rktpost.exe/KML_GPX_converter)
   
   * [Mapviz (ROS)](https://medium.com/@hitlx916/visualize-the-gnss-messages-in-mapviz-ros-4ae7eec19936) 
     (Ref: [https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite](https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite)) 
