@@ -1,5 +1,13 @@
 ## RTK GPS utilization ([Emlid Reach M2](https://emlid.com/reach/))
 
+* How to check whether Emlid M2 is connected to computer
+  ```
+  telnet 192.168.1.93 9001
+  ```
+  
+  * `192.168.1.93`: Emlid M2 IP address (Check the app: (example: MSRAL_GPS))
+  * `9001`: port of position output(position streaming) (Check the app)
+ 
 ### 1. How to get RTK GPS data in ROS
 
 * [ROS driver(reach_ros_node)](https://github.com/rpng/reach_ros_node)
@@ -26,14 +34,6 @@
   ```
   sudo apt-get install ros-noetic-nmea-navsat-driver
   ```
-
-* How to check whether Emlid M2 is connected to computer
-  ```
-  telnet 192.168.1.93 9001
-  ```
-  
-  * `192.168.1.93`: Emlid M2 IP address (Check the app: (example: MSRAL_GPS))
-  * `9001`: port of position output(position streaming) (Check the app)
   
 * Find the serial port corresponding to the Emlid GPS device.
   ```
