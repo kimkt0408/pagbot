@@ -19,6 +19,7 @@
   
   * Output: `/tcpfix` (rostopic: `sensor_msgs/NavSatFix`)
   
+  
 ### 2. How to get GPS data without RTK in ROS
 
 * [ROS driver(nmea_navsat_driver)](http://wiki.ros.org/nmea_navsat_driver)
