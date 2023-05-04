@@ -86,6 +86,7 @@
     (Ref: [https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite](https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite)) 
     
     ```
+    sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy
     roslaunch mapviz mapviz.launch
     ```
 
