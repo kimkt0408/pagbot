@@ -1,4 +1,4 @@
-## RTK GPS utilization (Emlid Reach M2)
+## RTK GPS utilization ([Emlid Reach M2](https://emlid.com/reach/))
 
 ### 1. How to get RTK GPS data in ROS
 
