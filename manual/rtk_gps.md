@@ -1,5 +1,7 @@
 ## RTK GPS utilization ([Emlid Reach M2](https://emlid.com/reach/))
 
+* About RTK GPS data format: https://anavs.com/knowledgebase/nmea-format/
+
 * How to check whether Emlid M2 is connected to computer
   ```
   telnet 192.168.1.93 9001
