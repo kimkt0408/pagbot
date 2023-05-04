@@ -2,6 +2,23 @@
 
 ### 1. How to get RTK GPS data in ROS
 
+* [ROS driver(reach_ros_node)](https://github.com/rpng/reach_ros_node)
+  
+  ```
+  git clone https://github.com/rpng/reach_ros_node.git
+  ```
+  
+  * I modified some lines on the code. Check [here](https://github.com/kimkt0408/pagbot/tree/main/source/reach_ros_node).
+
+* Run the driver: Connect GPS module in PC physically
+
+  ```
+  roscore
+  rosrun reach_ros_node nmea_tcp_driver
+  ```
+  
+### 2. How to get GPS data without RTK in ROS
+
 * [ROS driver(nmea_navsat_driver)](http://wiki.ros.org/nmea_navsat_driver)
   ```
   sudo apt-get install ros-noetic-nmea-navsat-driver
@@ -50,7 +67,9 @@
     position_covariance_type: 1
     ```
 
-### 2. How to visualize RTK GPS data
+
+
+### 3. How to visualize RTK GPS data
   
   * [Emlid studio](https://docs.emlid.com/emlid-studio/kinematic-processing-workflow/?_gl=1*1a2vkm3*_ga*MTY5MzgyODgwMy4xNjgxNDE1MTY4*_ga_958NJK16DK*MTY4MjA4MDU5NC42LjEuMTY4MjA4MjExMS4wLjAuMA..) 
   
