@@ -23,8 +23,7 @@
 * Run the driver: Connect GPS module in PC physically
 
   ```
-  roscore
-  rosrun reach_ros_node nmea_tcp_driver
+  roslaunch reach_ros_node nmea_tcp_driver.launch
   ```
   
   * Output: `/tcpfix` (rostopic: `sensor_msgs/NavSatFix`)
