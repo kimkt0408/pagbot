@@ -85,6 +85,7 @@
   
   * [Mapviz (ROS)](https://medium.com/@hitlx916/visualize-the-gnss-messages-in-mapviz-ros-4ae7eec19936) 
     (Ref: [https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite](https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite)) 
+    (Ref: https://github.com/nobleo/rviz_satellite/blob/master/README.md)
     
     ```
     sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy
