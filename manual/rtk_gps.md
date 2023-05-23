@@ -27,6 +27,12 @@
   ```
   
   * Output: `/tcpfix` (rostopic: `sensor_msgs/NavSatFix`)
+
+* Overlay the local map into the global map
+
+  ```
+  roslaunch gps gps.launch
+  ```
   
   
 ### 2. How to get GPS data without RTK in ROS
