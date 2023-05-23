@@ -1,10 +1,15 @@
 <launch>
-    <node pkg="rviz" type="rviz" name="rviz" args="-d /home/kimkt0408/rviz/autonomous_navigation.rviz" />
+    <!-- (1) Define waypoints with numbers -->
+    <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d /home/kimkt0408/rviz/autonomous_navigation.rviz" /> -->
 
-    <group ns="move_base_seq">
-        <rosparam file="$(find autonomous_navigation)/param/navigation_param.yaml" />
-    </group>
+    <!-- <group ns="move_base_seq">
+        <rosparam file="$(find autonomous_navigation)/param/waypoints.yaml" />
+    </group> -->
 
-    <node pkg="autonomous_navigation" type="navigation_final.py" name="navigation" output="screen" />
+    <!-- <node pkg="autonomous_navigation" type="navigation_final.py" name="navigation" output="screen" /> -->
     
+    
+    <!-- (2) Define waypoints with the mouse -->
+    <node pkg="autonomous_navigation" type="navigation_waypoint.py" name="navigation" output="screen" />
+
 </launch>
