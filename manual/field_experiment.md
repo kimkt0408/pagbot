@@ -76,6 +76,7 @@
   * [Activate multi 3D LiDARs](https://github.com/kimkt0408/pagbot/blob/main/manual/multi_lidar_operation.md)
     ```
     roslaunch velodyne_pointcloud VLP16_points_multi.launch
+    roslaunch pc2_2_ls conversion.launch
     ```
   
 (4) AMCL localization
