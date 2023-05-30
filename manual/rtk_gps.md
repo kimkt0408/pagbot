@@ -99,7 +99,12 @@
     sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy
     roslaunch mapviz mapviz.launch
     ```
-
+    
+    ```
+    https://tile.openstreetmap.org/{z}/{x}/{y}.png
+    http://localhost:8080/wmts/gm_layer/gm_grid/{z}/{x}/{y}.png
+    ```
+    
     * Result
     
       <img src="https://user-images.githubusercontent.com/42059549/234695130-fdeb13d6-7207-4255-943a-2382f439369c.png" alt="gps_ros_mapviz" width="600" /> 
