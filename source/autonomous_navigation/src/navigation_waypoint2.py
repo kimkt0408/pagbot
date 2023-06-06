@@ -74,8 +74,8 @@ class PathFollower:
     # AMCL pose callback function
     def PoseListener(self):
         try:
-            # (self.trans_pose, self.rot_pose) = self.listener.lookupTransform('/map', '/base_link', rospy.Time(0))
-            (self.trans_pose, self.rot_pose) = self.pose_listener.lookupTransform('/odom', '/base_link', rospy.Time(0))
+            # (self.trans_pose, self.rot_pose) = self.listener.lookupTransform('/map', '/base_link', rospy.Time(0))     # For real test
+            (self.trans_pose, self.rot_pose) = self.pose_listener.lookupTransform('/odom', '/base_link', rospy.Time(0)) # For simulation
             self.pose_x, self.pose_y, _ = self.trans_pose
             _, _, self.pose_yaw = tf.transformations.euler_from_quaternion(self.rot_pose)
         
@@ -289,16 +289,16 @@ class PathFollower:
 
         # Check if the transform is available without extrapolation
         try:
-            # self.tf_buffer.can_transform("odom", point_cloud.header.frame_id, rospy.Time(0), rospy.Duration(1.0))
-            self.tf_buffer.can_transform("odom", point_cloud.header.frame_id, point_cloud_time, rospy.Duration(1.0))
+            # self.tf_buffer.can_transform("odom", point_cloud.header.frame_id, rospy.Time(0), rospy.Duration(1.0))     # For real test
+            self.tf_buffer.can_transform("odom", point_cloud.header.frame_id, point_cloud_time, rospy.Duration(1.0))    # For simulation
         except tf2_ros.TransformException as ex:
             rospy.logwarn("Failed to check transform: %s" % str(ex))
             return
 
         # Perform the frame transformation from lidar frame to map frame
         try:
-            # trans = self.tf_buffer.lookup_transform("odom", point_cloud.header.frame_id, rospy.Time(0), rospy.Duration(1.0))            
-            trans = self.tf_buffer.lookup_transform("odom", point_cloud.header.frame_id, point_cloud_time, rospy.Duration(1.0))
+            # trans = self.tf_buffer.lookup_transform("odom", point_cloud.header.frame_id, rospy.Time(0), rospy.Duration(1.0))  # For real test          
+            trans = self.tf_buffer.lookup_transform("odom", point_cloud.header.frame_id, point_cloud_time, rospy.Duration(1.0)) # For simulation
             point_cloud_transformed = do_transform_cloud(point_cloud, trans)
         except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as ex:
             rospy.logwarn("Failed to transform point cloud: %s" % str(ex))
@@ -314,33 +314,7 @@ class PathFollower:
         
         self.lidar_callback_called = True
         rospy.sleep(0.1)
-        
-
-
-    # def lidarCallback(self, point_cloud):
-
-    #     self.lidar_callback_called = False
-        
-    #     try:
-    #         #trans = self.tf_buffer.lookup_transform("odom", point_cloud.header.frame_id, point_cloud.header.stamp, rospy.Duration(1.0))
-    #         trans = self.tf_buffer.lookup_transform("odom", point_cloud.header.frame_id, rospy.Time(0), rospy.Duration(1.0))
-    #         point_cloud_transformed = do_transform_cloud(point_cloud, trans)
-    #     except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as ex:
-    #         rospy.logwarn("Failed to transform point cloud: %s" % str(ex))
-    #         return
-
-    #     if len(self.pose_seq):
-    #         self.PoseListener()
-
-    #         # Process the transformed LiDAR data and generate a path with obstacle avoidance logic
-    #         self.path = []
-    #         self.path = self.generate_path(point_cloud_transformed)
-    #         # print("PATH: ", self.path)
-        
-    #     self.lidar_callback_called = True
-    #     rospy.sleep(0.1)
-        
-
+       
     def generate_path(self, point_cloud):
         cloud_points = self.point_cloud_to_array(point_cloud)
 
