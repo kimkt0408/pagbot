@@ -10,6 +10,6 @@
     
     
     <!-- (2) Define waypoints with the mouse -->
-    <node pkg="autonomous_navigation" type="navigation_waypoint.py" name="navigation" output="screen" />
+    <node pkg="autonomous_navigation" type="navigation_waypoint2.py" name="navigation" output="screen" />
 
 </launch>
