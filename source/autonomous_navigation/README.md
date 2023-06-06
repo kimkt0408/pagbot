@@ -14,6 +14,9 @@ This module is for the autonomous navigation by using 3D point cloud from a 3D L
    ```
    roslaunch jackal_gazebo test_world.launch
    ```
+   ```
+   roslaunch pagslam pagslam_gazebo.launch
+   ```
   
   * Launch the autonomous navigation module
    ```
