@@ -1,4 +1,4 @@
-## P-AgSLAM with optional RTK GPS
+## P-AgSLAM ver. 2 (with optional RTK GPS)
 
 This is the 2nd version of P-AgSLAM which optionally fuses RTK GPS data to update the robot pose in the global coordinate system.
 
