@@ -67,6 +67,10 @@ This is the 2nd version of P-AgSLAM which optionally fuses RTK GPS data to updat
    ```
 
   * P-AgSLAM / GTSAM (Check: `boolCloud_ = false`. If it is `true`, the rosbag file size should increase exponentially.)
+    
+   ```
+   roslaunch gtsam factorGraph.launch
+   ```
 
 
 <!-- ### 3. Test scenarios
