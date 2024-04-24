@@ -50,7 +50,7 @@ This is the 2nd version of P-AgSLAM which optionally fuses RTK GPS data to updat
 
   * Do RTK GPS setting before field tests (1.)
   
-  * Initialize `/odometry/filtered` (Do twice: at the first launch, `ekf_localization_node` stops to publish rostopic
+  * Initialize `/odometry/filtered` (Do twice: at the first launch, `ekf_localization_node` stops to publish rostopic.)
     
    ```
    roslaunch realsense2_camera rs_t265_localizer.launch
