@@ -4,7 +4,7 @@ This is the 2nd version of P-AgSLAM which optionally fuses RTK GPS data to updat
 
 ### 1. RTK GPS Setting before field tests
 
-(Edit `gps/launch/gps_localization.launch` or gps/launch/gps_localization_kissicp.launch)
+(Edit `gps/launch/gps_localization.launch` or `gps/launch/gps_localization_kissicp.launch`)
 
   * The origin of the global coordinate
     * Check `latitude` & `longitude`: `rostopic echo /gps/fix`
