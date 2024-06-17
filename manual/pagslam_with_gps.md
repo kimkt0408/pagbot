@@ -4,17 +4,18 @@ This is the 2nd version of P-AgSLAM which optionally fuses RTK GPS data to updat
 
 ### 1. RTK GPS Setting before field tests
 
-(Edit `gps/launch/gps_localization.launch`)
+(Edit `gps/launch/gps_localization.launch` or gps/launch/gps_localization_kissicp.launch)
 
   * The origin of the global coordinate
     * Check `latitude` & `longitude`: `rostopic echo /gps/fix`
     * Change values in `<rosparam param="datum">[40.49544639166667, -87.00096109166667, 0.0, world, base_link]</rosparam>`.
 
+(Edit `robot_localization/params/navsat_transform_gps.yaml`)
   * Yaw offset
     * Initialize `/odometry/filtered` by `roslaunch realsense2_camera rs_t265_localizer.launch`
    
     * Measure values in `/imu/data/orientation`.
-    * Convert quaternion into [RPY](https://www.andre-gaschler.com/rotationconverter/).
+    * Convert quaternion into [RPY(ZYX)](https://www.andre-gaschler.com/rotationconverter/).
     * Change values of `<param name="yaw_offset" value="2.4">`.
     * Put the value: `-Yaw (Z)`
 
