@@ -17,7 +17,7 @@ This is the 2nd version of P-AgSLAM which optionally fuses RTK GPS data to updat
     * Measure values in `/imu/data/orientation`.
     * Convert quaternion into [RPY(ZYX)](https://www.andre-gaschler.com/rotationconverter/).
     * Change values of `<param name="yaw_offset" value="2.4">`.
-    * Put the value: `-Yaw (Z)`
+    * Put the value: `-Yaw (Z)` (ACRE2024: `-Yaw(Z) - pi/2`)
 
   * Do `catkin_make`
 
